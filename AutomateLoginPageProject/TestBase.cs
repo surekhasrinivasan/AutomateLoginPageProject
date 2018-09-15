@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomateLoginPageProject
 {
-    public class Class1
+    public class TestBase
     {
     }
 }
