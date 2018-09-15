@@ -26,7 +26,15 @@ namespace AutomateLoginPageProject
         {
             driver.Url = "https://www.yahoo.com/";
             driver.FindElement(By.XPath("//*[@id=\"uh-signin\"]")).Click();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            IWebElement username = driver.FindElement(By.XPath("//*[@id=\"login-username\"]"));
+            username.SendKeys("surekha.srinivasan@yahoo.com");
+            username.Submit();
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            IWebElement password = driver.FindElement(By.Id("login-passwd"));
+            password.SendKeys("Careerdevs");
+            password.SendKeys(Keys.Enter);
         } 
         
         [TearDown]
