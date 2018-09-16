@@ -11,7 +11,7 @@ namespace AutomateLoginPageProject
 {
     public class TestBase
     {
-        IWebDriver driver;
+        protected IWebDriver driver;
 
         [SetUp]
         public void SetUp()
@@ -20,23 +20,7 @@ namespace AutomateLoginPageProject
             driver.Manage().Window.Maximize();//maximizes the window
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);//set LocatorTimeout to be 20 seconds at max
         }
-        
-        [Test]
-        public void OpenWebPage()
-        {
-            driver.Url = "https://www.yahoo.com/";
-            driver.FindElement(By.XPath("//*[@id=\"uh-signin\"]")).Click();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            IWebElement username = driver.FindElement(By.XPath("//*[@id=\"login-username\"]"));
-            username.SendKeys("surekha.srinivasan@yahoo.com");
-            username.Submit();
-
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            IWebElement password = driver.FindElement(By.Id("login-passwd"));
-            password.SendKeys("Careerdevs");
-            password.SendKeys(Keys.Enter);
-        } 
-        
+                
         [TearDown]
         public void CleanUp()
         {
