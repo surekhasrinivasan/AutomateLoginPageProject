@@ -28,8 +28,11 @@ namespace SeleniumGoogleLoginDemo
             // maximize the window
             driver.Manage().Window.Maximize();
 
+            // declare and initialize the variable to store the expected title of the webpage.
+            string expectedTitle = " Sign in - Google Accounts ";
 
-
+            // fetch the title of the web page and save it into a string variable
+            string actualTitle = driver.Title;                                  
         }
     }
 }
