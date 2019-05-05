@@ -22,6 +22,14 @@ namespace SeleniumGoogleLoginDemo
             // Instantiation of object and variables
             IWebDriver driver = new ChromeDriver();
 
+            // launch the browser and open the url
+            driver.Navigate().GoToUrl("https://accounts.google.com");
+
+            // maximize the window
+            driver.Manage().Window.Maximize();
+
+
+
         }
     }
 }
