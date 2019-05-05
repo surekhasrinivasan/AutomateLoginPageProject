@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +15,13 @@ namespace SeleniumGoogleLoginDemo
     // Enter the username and Password.
     // Click on the Sign in button.
     // Close the web browser.
-    class Program
+    public class Google_Login
     {
         static void Main(string[] args)
         {
+            // Instantiation of object and variables
+            IWebDriver driver = new ChromeDriver();
+
         }
     }
 }
