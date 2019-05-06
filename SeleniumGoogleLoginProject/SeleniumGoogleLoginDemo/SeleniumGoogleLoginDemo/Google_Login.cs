@@ -44,6 +44,12 @@ namespace SeleniumGoogleLoginDemo
                 Console.WriteLine("Verification failed - An incorrect title is displayed on the web page");
             }
 
+            // enter a valid username in the email textbox 
+            IWebElement username = driver.FindElement(By.XPath("//*[@id=\"identifierId\"]"));
+            username.Clear();
+            username.SendKeys("TestSelenium");
+
+            // enter a valid password in the 
 
         }
     }
