@@ -32,7 +32,17 @@ namespace SeleniumGoogleLoginDemo
             string expectedTitle = " Sign in - Google Accounts ";
 
             // fetch the title of the web page and save it into a string variable
-            string actualTitle = driver.Title;                                  
+            string actualTitle = driver.Title;
+
+            // compare the expected title of the page with the actual title of the page and print the result
+            if (expectedTitle.Equals(actualTitle))
+            {
+                Console.WriteLine("Verification successful - The correct title is displayed on the web page");
+            }
+            else
+            {
+                Console.WriteLine("Verification failed - An incorrect title is displayed on the web page");
+            }
         }
     }
 }
