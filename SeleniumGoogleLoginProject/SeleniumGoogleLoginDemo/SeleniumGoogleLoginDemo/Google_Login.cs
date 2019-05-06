@@ -50,6 +50,9 @@ namespace SeleniumGoogleLoginDemo
             username.SendKeys("TestSelenium");
 
             // enter a valid password in the 
+            IWebElement password = driver.FindElement(By.XPath("//*[@id=\"password\"]/div[1]/div/div[1]/input"));
+            password.Clear();
+            password.SendKeys("password123");
 
         }
     }
