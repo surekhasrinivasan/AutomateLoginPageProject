@@ -57,6 +57,10 @@ namespace SeleniumGoogleLoginDemo
             // click on the Signin button
             IWebElement signInBtn = driver.FindElement(By.XPath("//*[@id=\"passwordNext\"]"));
 
+            // close the browser
+            driver.Close();
+            Console.WriteLine("Test script executed successfully");
+
         }
     }
 }
